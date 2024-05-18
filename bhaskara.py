@@ -17,8 +17,13 @@ if(delta == 0):
     print("A raiz quadrada é {}".format(raiz1))
 elif delta < 0:
     print("Esta equação não possui raízes reais")
-else:    
-    print("As raízes da equação são {}, {}".format(raiz1, raiz2))  
+elif delta > 0:
+    if raiz1 != raiz2:
+        menor = min(raiz1, raiz2)
+        maior =  max(raiz1, raiz2)        
+        print("As raízes da equação são {}, {}. Onde {} e {} são os valores da raízes".format(menor, maior, menor, maior))
+    else:
+        print("As raízes da equação são {}, {}. Onde {} e {} são os valores da raízes".format(raiz1, raiz2, raiz1, raiz2))
    
 
 
